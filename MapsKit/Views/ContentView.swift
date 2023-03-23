@@ -13,7 +13,8 @@ struct ContentView: View {
             MapView()
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 500)
-            Boll()
+            
+            Image()
                 .offset(y: -150)
                 .padding(.bottom, -150)
             
@@ -46,7 +47,7 @@ struct ContentView: View {
 
 
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentViewPreviews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
