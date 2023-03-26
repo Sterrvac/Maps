@@ -1,5 +1,5 @@
 //
-//  Image.swift
+//  CircleImage.swift
 //  MapsKit
 //
 //  Created by macbook on 23.03.2023.
@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct CircleImage: View {
+    var image: Image
+    
     var body: some View {
-        Image("luna")
+        image
             .clipShape(Circle())
             .overlay {
                 Circle().stroke(.white, lineWidth: 4)
@@ -20,6 +22,6 @@ struct CircleImage: View {
 
 struct Image_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage()
+        CircleImage(image: Image("luna"))
     }
 }

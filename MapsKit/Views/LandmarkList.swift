@@ -1,5 +1,5 @@
 //
-//  LandmarketList.swift
+//  LandmarkList.swift
 //  MapsKit
 //
 //  Created by macbook on 23.03.2023.
@@ -7,14 +7,27 @@
 
 import SwiftUI
 
-struct LandmarketList: View {
+struct LandmarkList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(landmarks) { landmark in
+                NavigationLink {
+                    LandmarkDetail(landmark: landmark)
+                } label: {
+                    LandmarkRow(landmark: landmark)
+                }
+            }
+            .navigationTitle("Landmarks")
+        }
     }
 }
 
-struct LandmarketList_Previews: PreviewProvider {
+struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarketList()
+        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
+            LandmarkList()
+                .previewDevice(PreviewDevice(rawValue: "iPhone SE (2nd generation)"))
+                .previewDisplayName(deviceName)
+        }
     }
 }
