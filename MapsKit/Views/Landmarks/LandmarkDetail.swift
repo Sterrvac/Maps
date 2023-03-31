@@ -19,7 +19,7 @@ struct LandmarkDetail: View {
         ScrollView {
             MapView(coordinate: landmark.locationCoordinate)
                 .ignoresSafeArea(edges: .top)
-                .frame(height: 500)
+                .frame(height: 300)
             
             CircleImage(image: landmark.image)
                 .offset(y: -150)
@@ -34,10 +34,8 @@ struct LandmarkDetail: View {
 
                 HStack {
                     Text(landmark.attractions)
-                        .font( .subheadline)
                     Spacer()
                     Text(landmark.state)
-                        .font( .subheadline)
                 }
                 .font( .subheadline)
                 .foregroundColor( .secondary)
@@ -48,7 +46,7 @@ struct LandmarkDetail: View {
                     .font(.title2)
                 Text(landmark.description)
             }
-            .padding(.horizontal, 70)
+            .padding()
         }
         .navigationTitle(landmark.name)
         .navigationBarTitleDisplayMode(.inline)
@@ -57,6 +55,7 @@ struct LandmarkDetail: View {
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static let modelData = ModelData()
+    
     static var previews: some View {
         LandmarkDetail(landmark: ModelData().landmarks[0])
             .environmentObject(modelData)

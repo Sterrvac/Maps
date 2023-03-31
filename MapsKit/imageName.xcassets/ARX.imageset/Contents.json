@@ -5,6 +5,7 @@
       "scale" : "1x"
     },
     {
+      "compression-type" : "lossless",
       "filename" : "АРХ.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
