@@ -1,6 +1,6 @@
 # Maps
 
-![Screenshot](https://github.com/Sterrvac/Maps/blob/Main/Image/1.png?raw=true)
+![Screenshot](1.png)
 
 ![Screenshot](https://github.com/Sterrvac/Maps/blob/Main/Image/2.png?raw=true)
 
